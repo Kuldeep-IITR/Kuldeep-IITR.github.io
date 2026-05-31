@@ -4,120 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuldeep | Software Engineering Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         /* Base Styles */
+        :root {
+            --primary: #10b981; /* Emerald Green */
+            --primary-hover: #059669;
+            --bg-color: #f8fafc;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --header-gradient: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.7;
             margin: 0;
             padding: 0;
-            color: #444;
-            background-color: #f8f9fa;
+            color: var(--text-main);
+            background-color: var(--bg-color);
         }
 
         /* Header Styling */
         header {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
+            background: var(--header-gradient);
             color: #fff;
-            padding: 4rem 1rem;
+            padding: 5rem 1rem 4rem;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
-            border: 4px solid #1abc9c;
+            border: 4px solid var(--primary);
             object-fit: cover;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-bottom: 1.2rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
         }
         header h1 {
             margin: 0;
-            font-size: 3rem;
-            letter-spacing: 1px;
+            font-size: 3.2rem;
+            letter-spacing: -1px;
             font-weight: 700;
         }
         header p {
-            font-size: 1.2rem;
-            margin-top: 0.8rem;
-            color: #1abc9c;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            margin-top: 0.5rem;
+            color: #94a3b8;
+            font-weight: 400;
+            margin-bottom: 2rem;
         }
-        .btn {
-            display: inline-block;
-            background: #1abc9c;
-            color: #fff;
-            padding: 10px 25px;
-            border-radius: 25px;
-            text-decoration: none;
+        .highlight-text {
+            color: var(--primary);
             font-weight: 600;
-            transition: background 0.3s ease;
-        }
-        .btn:hover {
-            background: #16a085;
-            text-decoration: none;
-            color: #fff;
         }
 
         /* Layout */
         .container {
             width: 85%;
             max-width: 900px;
-            margin: auto;
-            overflow: hidden;
-            padding: 3rem 0;
+            margin: -2rem auto 3rem auto;
+            position: relative;
+            z-index: 10;
         }
 
         /* Section Titles */
         .section-wrapper {
-            text-align: center;
-            margin-top: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
         }
         .section-title {
-            margin-bottom: 2.5rem;
-            font-size: 2.2rem;
-            color: #2c3e50;
-            border-bottom: 3px solid #1abc9c;
+            font-size: 1.8rem;
+            color: #0f172a;
+            border-bottom: 3px solid var(--primary);
             display: inline-block;
-            padding-bottom: 8px;
-            font-weight: 600;
+            padding-bottom: 6px;
+            font-weight: 700;
+            margin: 0;
         }
 
         /* Card Styling & Hover Effects */
         .card {
-            background: #fff;
-            padding: 2rem;
+            background: var(--card-bg);
+            padding: 2.5rem;
             margin-bottom: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-            border-left: 5px solid #1abc9c;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid var(--primary);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
         }
         .card p {
             font-size: 1.05rem;
+            color: var(--text-main);
         }
 
         /* Typography Emphasizers */
         .highlight {
-            color: #2c3e50;
-            font-weight: 700;
+            color: #0f172a;
+            font-weight: 600;
         }
         .project-title {
-            color: #2c3e50;
+            color: #0f172a;
             margin-top: 0;
-            font-size: 1.5rem;
-            margin-bottom: 0.2rem;
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+            font-weight: 700;
         }
         .tech-stack {
-            font-size: 0.9rem;
-            color: #7f8c8d;
+            font-size: 0.85rem;
+            color: var(--primary);
             font-weight: 600;
             margin-bottom: 1.2rem;
             text-transform: uppercase;
@@ -130,8 +142,11 @@
             margin: 0;
         }
         ul.custom-list li {
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             font-size: 1.05rem;
+        }
+        ul.custom-list li:last-child {
+            margin-bottom: 0;
         }
         
         /* Skills Badges */
@@ -141,42 +156,69 @@
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
-            justify-content: center;
         }
         .skills-list li {
-            background: #e8f8f5;
-            color: #16a085;
-            padding: 8px 20px;
-            border-radius: 25px;
+            background: #f1f5f9;
+            color: #334155;
+            padding: 8px 18px;
+            border-radius: 8px;
             font-size: 0.95rem;
-            font-weight: 600;
-            border: 1px solid #1abc9c;
-            transition: all 0.3s ease;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
         }
         .skills-list li:hover {
-            background: #1abc9c;
+            background: var(--primary);
             color: #fff;
+            border-color: var(--primary);
             cursor: default;
         }
 
-        /* Links & Footer */
-        a {
-            color: #1abc9c;
+        /* Social Connect Buttons */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f8fafc;
+            color: #334155;
+            padding: 12px 24px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
+            font-weight: 600;
+            border: 1px solid #cbd5e1;
+            transition: all 0.3s ease;
         }
-        a:hover {
-            color: #16a085;
-            text-decoration: underline;
+        .social-btn i {
+            font-size: 1.2rem;
         }
+        .social-btn:hover {
+            background: #0f172a;
+            color: #ffffff;
+            border-color: #0f172a;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 2rem 0;
-            background: #2c3e50;
-            color: #fff;
-            margin-top: 3rem;
+            background: #0f172a;
+            color: #94a3b8;
             font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .container { width: 92%; margin-top: -1rem; }
+            .card { padding: 1.5rem; }
+            .social-links { justify-content: center; }
         }
     </style>
 </head>
@@ -185,15 +227,13 @@
     <header>
         <img src="profile.png" alt="Kuldeep" class="profile-img">
         <h1>Kuldeep</h1>
-        <p>B.Tech. ECE (3rd Year), IIT Roorkee | Incoming SWE Intern @ ThoughtSpot India</p>
-        <!-- BUTTON FOR DOWNLOADING RESUME -->
-        <!-- <a href="Resume_Kuldeep.pdf" target="_blank" class="btn">Download Resume</a> -->
+        <p>B.Tech. ECE (3rd Year), IIT Roorkee | Incoming <span class="highlight-text">SWE Intern @ ThoughtSpot India</span></p>
     </header>
 
     <div class="container">
         
         <div class="section-wrapper">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title"><i class="fa-solid fa-user-astronaut"></i> About Me</h2>
         </div>
         <div class="card">
             <p>I am currently in my 3rd year pursuing a <span class="highlight">B.Tech. in Electronics & Communication Engineering</span> at the <span class="highlight">Indian Institute of Technology, Roorkee</span> with a CGPA of <span class="highlight">8.624</span>.</p>
@@ -201,7 +241,7 @@
         </div>
 
         <div class="section-wrapper">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
         </div>
         <div class="card">
             <ul class="custom-list">
@@ -215,7 +255,7 @@
         </div>
 
         <div class="section-wrapper">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title"><i class="fa-solid fa-code"></i> Technical Skills</h2>
         </div>
         <div class="card" style="border-left: none; box-shadow: none; background: transparent; padding: 0;">
             <ul class="skills-list">
@@ -225,12 +265,13 @@
                 <li>Data Structures & Algorithms</li>
                 <li>MATLAB</li>
                 <li>Cloudflare Workers</li>
+                <li>HTML / CSS / JavaScript</li>
                 <li>Web Development</li>
             </ul>
         </div>
 
         <div class="section-wrapper">
-            <h2 class="section-title">Projects & Research</h2>
+            <h2 class="section-title"><i class="fa-solid fa-rocket"></i> Projects & Research</h2>
         </div>
         
         <div class="card">
@@ -252,7 +293,7 @@
         </div>
 
         <div class="section-wrapper">
-            <h2 class="section-title">Achievements & Leadership</h2>
+            <h2 class="section-title"><i class="fa-solid fa-trophy"></i> Achievements & Leadership</h2>
         </div>
         <div class="card">
             <ul class="custom-list">
@@ -265,18 +306,26 @@
         </div>
 
         <div class="section-wrapper">
-            <h2 class="section-title">Connect With Me</h2>
+            <h2 class="section-title"><i class="fa-solid fa-envelope"></i> Connect With Me</h2>
         </div>
-        <div class="card" style="text-align: center; border-left: none;">
-            <p style="font-size: 1.2rem;">
-                <a href="https://github.com/Kuldeep-IITR" target="_blank">GitHub</a> &nbsp; | &nbsp; 
-                <a href="mailto:kuldeep1@ece.iitr.ac.in">kuldeep1@ece.iitr.ac.in</a>
-            </p>
+        <div class="card" style="border-left: none; text-align: center;">
+            <p>I am always open to discussing new opportunities, competitive programming, or tech collaborations.</p>
+            <div class="social-links" style="justify-content: center;">
+                <a href="https://github.com/Kuldeep-IITR" target="_blank" class="social-btn">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/kuldeep-verma-909270288/" target="_blank" class="social-btn">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="mailto:kuldeep1@ece.iitr.ac.in" class="social-btn">
+                    <i class="fa-solid fa-paper-plane"></i> Email Me
+                </a>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Kuldeep. Built with GitHub Pages.</p>
+        <p>&copy; 2026 Kuldeep. Designed and built for the web.</p>
     </footer>
 
 </body>
