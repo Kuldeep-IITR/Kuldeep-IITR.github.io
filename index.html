@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuldeep | Software Engineering Portfolio</title>
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -126,6 +128,15 @@
             font-size: 1.4rem;
             margin-bottom: 0.3rem;
             font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .project-date {
+            font-size: 0.95rem;
+            color: #64748b;
+            font-weight: 400;
         }
         .tech-stack {
             font-size: 0.85rem;
@@ -142,7 +153,7 @@
             margin: 0;
         }
         ul.custom-list li {
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             font-size: 1.05rem;
         }
         ul.custom-list li:last-child {
@@ -227,7 +238,7 @@
     <header>
         <img src="profile.png" alt="Kuldeep" class="profile-img">
         <h1>Kuldeep</h1>
-        <p>B.Tech. ECE (3rd Year), IIT Roorkee | Incoming <span class="highlight-text">SWE Intern @ ThoughtSpot India</span></p>
+        <p>B.Tech. ECE (4th Year), IIT Roorkee | SWE Intern @ <span class="highlight-text">ThoughtSpot India</span></p>
     </header>
 
     <div class="container">
@@ -236,8 +247,8 @@
             <h2 class="section-title"><i class="fa-solid fa-user-astronaut"></i> About Me</h2>
         </div>
         <div class="card">
-            <p>I am currently in my 3rd year pursuing a <span class="highlight">B.Tech. in Electronics & Communication Engineering</span> at the <span class="highlight">Indian Institute of Technology, Roorkee</span> with a CGPA of <span class="highlight">8.624</span>.</p>
-            <p>I am highly passionate about <span class="highlight">software engineering</span>, <span class="highlight">competitive programming</span> (Codeforces max rating <strong>1588</strong>), and building practical web utilities. Beyond coding, I actively contribute to campus life and administration, currently serving as the <span class="highlight">Operations Head at the Models and Robotics Section (MaRS)</span> and the <span class="highlight">Mess Secretary for Vivekananda Bhawan</span>.</p>
+            <p>I am currently in my 4th year pursuing a <span class="highlight">B.Tech. in Electronics & Communication Engineering</span> at the <span class="highlight">Indian Institute of Technology, Roorkee</span> with a CGPA of <span class="highlight">8.624</span>.</p>
+            <p>I am highly passionate about <span class="highlight">software engineering</span>, <span class="highlight">competitive programming</span> (Codeforces max rating <strong>1588</strong>), and building practical web utilities. Beyond coding, I actively contribute to campus life and administration, currently serving as the <span class="highlight">Technical Lead at the Models and Robotics Section (MaRS)</span> and the <span class="highlight">Mess Secretary for Vivekananda Bhawan</span>.</p>
         </div>
 
         <div class="section-wrapper">
@@ -262,11 +273,12 @@
                 <li>C / C++</li>
                 <li>Java</li>
                 <li>Python</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
                 <li>Data Structures & Algorithms</li>
                 <li>MATLAB</li>
                 <li>Cloudflare Workers</li>
-                <li>HTML / CSS / JavaScript</li>
-                <li>Web Development</li>
+                <li>HTML / CSS</li>
             </ul>
         </div>
 
@@ -275,21 +287,77 @@
         </div>
         
         <div class="card">
-            <h3 class="project-title">Web Utility Applications</h3>
-            <div class="tech-stack">Cloudflare Workers | GitHub Pages | HTML/JS</div>
-            <p>Developed and deployed a suite of web applications hosted on a custom .tech domain. Projects include a <span class="highlight">diet tracking dashboard</span>, a <span class="highlight">PDF reader</span>, and a <span class="highlight">MIDI-connected piano learning interface</span>.</p>
+            <h3 class="project-title">AI-Powered Nutritional Tracker <span class="project-date">Apr 2025 – May 2026</span></h3>
+            <div class="tech-stack">JavaScript | Gemini API (Web Workers) | LocalStorage</div>
+            <ul class="custom-list">
+                <li>Developed a secure, natural-language nutritional tracker optimized for Indian vegetarian diets.</li>
+                <li>Integrated the Gemini API via web workers to parse free-text inputs into structured JSON macronutrient data.</li>
+                <li>Built a robust local state management system using LocalStorage for caching meal history and a custom client-side passcode authentication layer.</li>
+            </ul>
         </div>
 
         <div class="card">
-            <h3 class="project-title">Robotics & Autonomous Navigation</h3>
-            <div class="tech-stack">MaRS IIT Roorkee | Inter IIT Tech Meet 13.0</div>
-            <p>Worked on the autonomous navigation of drones in GPS-denied environments. Developed <span class="highlight">quadrotor position and altitude control systems</span> capable of handling single motor failure, securing 4th place in the Inter IIT Tech Meet 13.0. Additionally contributed to <span class="highlight">MediBot</span>, an automated prescription-based medicine collector.</p>
+            <h3 class="project-title">Smart PDF Reader & Annotation Platform <span class="project-date">Apr 2026</span></h3>
+            <div class="tech-stack">JavaScript | REST APIs | PDF.js | IndexedDB | pdf-lib</div>
+            <ul class="custom-list">
+                <li>Engineered a high-performance PDF rendering platform with continuous scroll and dynamic dark mode support.</li>
+                <li>Implemented IndexedDB for persisting user sessions and integrated external REST APIs for instant on-page dictionary definitions.</li>
+                <li>Utilized pdf-lib to serialize DOM-based highlights onto the raw PDF array buffer for permanent file exports.</li>
+            </ul>
         </div>
 
         <div class="card">
-            <h3 class="project-title">Software Defined Radio & Network Jamming</h3>
-            <div class="tech-stack">ECE Department, IIT Roorkee | Hardware & DSP</div>
-            <p>Explored 4G WiFi and 3G Mobile Network Jamming using USRP hardware. Implemented <span class="highlight">Rate-Splitting Multiple Access (RSMA)</span> protocols at the hardware level, successfully handling carrier frequency offset (CFO) correction and frame synchronization.</p>
+            <h3 class="project-title">ISDC 2026 Telemetry & Navigation System <span class="project-date">Aug 2025 – Feb 2026</span></h3>
+            <div class="tech-stack">Artificial Intelligence | ArduPilot | RF Hardware | Full-Stack Web</div>
+            <ul class="custom-list">
+                <li>Architected full-stack navigation systems and custom RF hardware for a space drone deployed at the International Space Drone Challenge (MaRS IIT Roorkee).</li>
+                <li>Developed a custom web application acting as a live telemetry dashboard, interfaced directly with ArduPilot firmware.</li>
+                <li>Designed a custom Yagi-Uda antenna to optimize operational RF range in unstructured Mars-analog environments.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="project-title">Data Compression & Decompression Portal <span class="project-date">Jun 2025</span></h3>
+            <div class="tech-stack">React.js | Huffman Coding | RLE</div>
+            <ul class="custom-list">
+                <li>Built a full-stack React.js frontend for a data compression portal (MaRS IIT Roorkee).</li>
+                <li>Implemented Huffman Coding and Run-Length Encoding (RLE) algorithms to compress/decompress data, dynamically computing original size, compressed size, and compression ratios.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="project-title">4G WiFi & 3G Mobile Network Jamming Using USRP <span class="project-date">Mar 2025 – May 2025</span></h3>
+            <div class="tech-stack">GNU Radio | USRP B210 | Raspberry Pi</div>
+            <ul class="custom-list">
+                <li>Designed and deployed a jamming system using USRP B210 on channels 1, 6, and 11.</li>
+                <li>Created GNURadio flowgraphs to synthesize precise jamming waveforms and evaluated interference effectiveness using LinSSID.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="project-title">Autonomous Drone Navigation (GPS Denied) <span class="project-date">Jan 2025 – Apr 2025</span></h3>
+            <div class="tech-stack">Visual SLAM | ROS | Raspberry Pi</div>
+            <ul class="custom-list">
+                <li>Developed a system for autonomous drone navigation using visual-inertial odometry and SLAM (MaRS IIT Roorkee).</li>
+                <li>Integrated multiple open-source SLAM algorithms with a depth camera onboard a Raspberry Pi for real-time localization and mapping.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="project-title">Quadrotor Position & Altitude Control <span class="project-date">Oct 2024 – Dec 2024</span></h3>
+            <div class="tech-stack">C++ | Python | ROS2 | PX4 | Gazebo</div>
+            <ul class="custom-list">
+                <li>Implemented an LQR-based control system to stabilize a quadrotor during single-motor failure (MaRS IIT Roorkee).</li>
+                <li>Developed a custom C++ module for PX4 firmware to integrate and test the low-latency failure detection strategy in real-time.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3 class="project-title">MediBot Automated Medicine Collector <span class="project-date">Aug 2024 – Nov 2024</span></h3>
+            <div class="tech-stack">Arduino IDE | SOLIDWORKS</div>
+            <ul class="custom-list">
+                <li>Built an automated system to identify, pick up, and dispense prescribed medicine based on digital doctor prescriptions (MaRS IIT Roorkee).</li>
+            </ul>
         </div>
 
         <div class="section-wrapper">
@@ -297,7 +365,7 @@
         </div>
         <div class="card">
             <ul class="custom-list">
-                <li><span class="highlight">Operations Head, MaRS:</span> Managed team operations, workflows, and event execution for robotics projects. Represented IIT Roorkee at Inter IIT Tech Meet 13.0.</li>
+                <li><span class="highlight">Technical Lead, MaRS:</span> Managed team operations, technical workflows, and event execution for robotics projects. Represented IIT Roorkee at Inter IIT Tech Meet 13.0.</li>
                 <li><span class="highlight">Mess Secretary, Vivekananda Bhawan:</span> Managed the student mess council, focusing on menu formation and continuous quality checks.</li>
                 <li><span class="highlight">Competitive Programming:</span> Achieved a global rank of 779 in Codeforces round 1032.</li>
                 <li><span class="highlight">Inter IIT Tech Meet 13.0:</span> Secured 4th place out of 23 IITs in the High Prep PS1.</li>
